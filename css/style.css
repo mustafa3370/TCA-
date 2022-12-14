@@ -23,6 +23,7 @@ body{
      font-family: "Work Sans", sans-serif;
      background-color: black;
 }
+
 ul{
     list-style: none;
 }
@@ -126,11 +127,7 @@ header nav ul li a{
     position: relative;
     z-index: 3;
 }
-header nav ul li a.active,
-header nav ul li a:hover{
-    color: var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-}
+
 header nav .form{
     width: 40px;
     height: 30px;
@@ -152,12 +149,15 @@ header nav .form i{
 .landing {
   padding-top: var(--section-padding);
   padding-bottom: calc(var(--section-padding) + 60px);
+  height: 420px;
+ 
 }
 .landing .landing-content {
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 @media (max-width: 991px) {
   .landing .landing-content {
@@ -171,6 +171,7 @@ header nav .form i{
   height: 375px;
   animation: position 3s infinite;
 }
+
 @keyframes position
 {
   0%{
@@ -235,12 +236,14 @@ header nav .form i{
   .portfolio {
     padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) + 60px);
+    
   }
   .portfolio .portfolio-content {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
   }
   @media (max-width: 991px) {
     .portfolio .portfolio-content {
@@ -289,149 +292,105 @@ header nav .form i{
     }
     }
     /*end portfolio*/
-    /*start videos*/
-    .videos {
+    /*start projects*/
+    .proj {
       padding-top: var(--section-padding);
       padding-bottom: calc(var(--section-padding) + 60px);
+      
     }
-    .videos .videos-content {
-    
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      grid-gap: 20px;
+    .proj .proj-content {
       margin-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       
     }
     @media (max-width: 991px) {
-      .videos .videos-content {
+      .proj .proj-content {
         flex-direction: column;
         text-align: center;
-        margin-left: -24px;
       }
     }
-       
-
-    /*test*/
-    .card {
+    .proj .proj-content .img {
       position: relative;
-      width: 380px;
-      height: min-content;
-      padding: 25px;
-      margin-bottom: 20px;
-      background: #ffffff15;
-      border: 2px solid #f0f32d;
-      border-radius: 20px;
-      transition: .4s;
-  } 
-  .card .card-header h3 {
-      color: #ffffff;
-      font-size: 28px;
-  }
-  
-  .card .card-header p {
-      color: #ffffff;
+      width: 350px;
+      height: 375px;
+      
+    }
+    @media (max-width: 991px) {
+      .proj .proj-content .img {
+        margin: 0 auto 60px;
+        margin-top: 17px;
+      }
+      
+    }
+    .proj .proj-content .img img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+    .proj .proj-content  .text {
+      flex-basis: calc(100% - 500px);
+    }
+    .proj .proj-content .text p {
+      font-weight: bold;
       font-size: 20px;
-  }
-  
-  
-  
-  .card .card-img {
+      margin-top: 120px;
+      line-height: 2;
+      color: rgb(255, 255, 255);
+    }
+    .proj .proj-content .text h3{
+      font-weight: bold;
+      font-size: 25px;
+      color: rgb(255, 255, 255);
+    }
+    .button a{
       position: relative;
-      height: 320px;
-      border-radius: 12px;
-      margin: 22px 0;
-      overflow: hidden;
-  }
-  
-  .card .card-img img {
-      width: 100%;
-      height: 100%;
-      transition: .4s;
-  }
-  
-  .card:hover .card-img img {
-      transform: scale(1.06);
-  }
-  
-  .card .card-img i {
-      cursor: pointer;
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      color: #757d8a;
-      background: #ffffff;
-      padding: 6px;
-      border-radius: 6px;
-  }
-  
-  .card .card-details {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
- 
-  .card .card-details .colors div.selected i {
-      opacity: 1;
-  }
- 
-  .card .card-footer button {
-    margin: 10px 0;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #171818;
-    background: rgb(247, 246, 246);
-    color: #131313;
-    font-size: 1em;
-    border-radius: 5px;
+      text-decoration: none;
     cursor: pointer;
-    text-decoration: none;
-  }
-  .card .card-footer button:hover{
-    color: rgb(255, 255, 255);
-    background: #131313;
-  }
-  .trailer{
-    position: fixed;
-    top: 115%;
-    left: 90%;
-    transform: translate(-90%,-90%);
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.95) ;
-    width: 100%;
-    height: 100%;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
+    padding: 11px 20px;
+    border-radius: 48px;
+    transition: background-color .2s ease;
+    background-color: #05f;
+    color: #fff;
+    white-space: nowrap;
+    width: fit-content;
+    fill: #fff;
+    display: flex;
+    margin-top: 80px;
+     animation: color 3s infinite;
   }
-  .trailer.active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailer video{
-    position: relative;
-    max-width: 900px;
-    outline: none;
-  }
-  .close {
-    position: absolute;
-    bottom: 1500px;
-    right: 50px;
-    cursor: pointer;
-    filter: invert(1);
-
-  }
-  @media(max-width:991px){
-    .trailer video{
-      max-width: 90%;
+  
+  @keyframes color
+  {
+    0%{
+      background-color: #05f;
+        right: 10px;
     }
-    .close{
-      bottom: 1970px;
+    50%{
+      background-color: #003ebb;
+      right: 0px;
+    }
+    100%{
+      background-color: #05f;
+      right: 10px;
     }
   }
-    /*End videos*/
 
+    
+    .button a i{
+     
+      font-size: 20px;
+    }
+    .button span{
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    /*End projects*/
+    
 
     /*package  Start */
     .package {
@@ -442,7 +401,7 @@ header nav .form i{
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
       grid-gap: 20px;
-      margin-top: 100px;
+      margin-top: 100px;  
       
     }
     @media (max-width: 991px) {
@@ -462,8 +421,6 @@ header nav .form i{
       margin: 5em auto;
       height: 350px;
       width: 700px;
-      
-      
     }
    
     
