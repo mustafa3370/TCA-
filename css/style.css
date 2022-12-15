@@ -32,8 +32,9 @@ html{
 body{  
      font-family: "Work Sans", sans-serif;
      background-color: black;
-    
+    overflow-x: hidden;
 }
+
 
 ul{
     list-style: none;
@@ -50,17 +51,26 @@ ul{
     .container {
       width: 750px;
     }
+    body{
+      overflow-x: hidden;
+    }
   }
   /* Medium */
   @media (min-width: 992px) {
     .container {
       width: 970px;
     }
+    body{
+      overflow-x: hidden;
+    }
   }
   /* Large */
   @media (min-width: 1200px) {
     .container {
       width: 1170px;
+    }
+    body{
+      overflow-x: hidden;
     }
   }
 /*end Global Rules*/
@@ -161,8 +171,6 @@ header nav .form i{
 .landing {
   padding-top: var(--section-padding);
   padding-bottom: calc(var(--section-padding) + 60px);
-  height: 420px;
- 
 }
 .landing .home-quote-spots-overlay  {
   position: absolute;
@@ -184,10 +192,11 @@ header nav .form i{
     flex-direction: column;
     text-align: center;
   }
-  .landing .home-quote-spots-overlay {
-    top: -26px;
-    right: -39px;
-    width: 45%;
+  .landing .home-quote-spots-overlay{
+    display: none;
+  }
+  body{
+    overflow-x: hidden;
   }
 }
 .landing .landing-content .image {
@@ -263,6 +272,14 @@ header nav .form i{
     padding-bottom: calc(var(--section-padding) + 60px);
     
   }
+ 
+  .portfolio .portfolio-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
   .portfolio .home-quote-spots-overlay  {
     position: absolute;
     top: 130%;
@@ -272,22 +289,13 @@ header nav .form i{
     max-width: 300px;
     opacity: 0.20;
   }
-  .portfolio .portfolio-content {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-  }
   @media (max-width: 991px) {
     .portfolio .portfolio-content {
       flex-direction: column;
       text-align: center;
     }
-    .portfolio .home-quote-spots-overlay {
-      top: 90%;
-      width: 48%;
-  
+    .portfolio .home-quote-spots-overlay{
+      display: none;
     }
   }
   .portfolio .portfolio-content .img {
@@ -338,18 +346,18 @@ header nav .form i{
     }
     .proj .home-quote-spots-overlay  {
       position: absolute;
-      top: 350%;
-      right: 0;
+      top: 440%;
+      left: 40%;
       width: 50%;
-      max-width: 300px;
+      max-width: 350px;
       opacity: 0.20;
     }
     .proj .home-quote-spots-overlay2  {
       position: absolute;
-      top: 370%;
-      left: 50%;
+      top: 410%;
+      left: 30%;
       width: 50%;
-      max-width: 300px;
+      max-width: 200px;
       opacity: 0.20;
     }
     .proj .proj-content {
@@ -365,15 +373,9 @@ header nav .form i{
         flex-direction: column;
         text-align: center;
       }
-      .proj .home-quote-spots-overlay{
-        top: 467%;
-        left: 200px;
-        width: 63%;
-      }
+      .proj .home-quote-spots-overlay,
       .proj .home-quote-spots-overlay2{
-        top: 374%;
-    left: 73px;
-    width: 89%;
+        display: none;
       }
     }
     .proj .proj-content .img {
@@ -469,11 +471,31 @@ header nav .form i{
       margin-top: 100px;  
       
     }
+    .package .home-quote-spots-overlay  {
+      position: absolute;
+      top: 510%;
+      left: 60%;
+      width: 50%;
+      max-width: 250px;
+      opacity: 0.20;
+    }
+    .package .home-quote-spots-overlay2  {
+      position: absolute;
+      top: 510%;
+      left: 22%;
+      width: 50%;
+      max-width: 250px;
+      opacity: 0.20;
+    }
     @media (max-width: 991px) {
       .package .pakage-content {
         flex-direction: column;
         text-align: center;
         margin-left: -24px;
+      }
+      .package .home-quote-spots-overlay,
+      .package .home-quote-spots-overlay2{
+        display: none;
       }
     }
 
@@ -801,38 +823,7 @@ h1:last-of-type {
     margin-bottom: 50px;
     margin-top: 100px;
 }
-.header .home-quote-spots-overlay{
-  position: absolute;
-      top: 470%;
-      left: 80%;
-      width: 70%;
-      max-width: 300px;
-      opacity: 0.20;
-}
-.header .home-quote-spots-overlay2{
-  position: absolute;
-  top: 570%;
-  right:80%;
-  width: 70%;
-  max-width: 300px;
-  opacity: 0.20;
-}
-.header .home-quote-spots-overlay3{
-  position: absolute;
-  top: 670%;
-  left:80%;
-  width: 70%;
-  max-width: 300px;
-  opacity: 0.20;
-}
-.header .home-quote-spots-overlay4{
-  position: absolute;
-  top: 770%;
-  right:80%;
-  width: 70%;
-  max-width: 300px;
-  opacity: 0.20;
-}
+
 .header p {
     margin: 0 auto;
     line-height: 2;
@@ -866,12 +857,6 @@ img {
     .box {
         text-align: center;
         height: 180px;
-    }
-    .header .home-quote-spots-overlay,
-    .header .home-quote-spots-overlay2,
-    .header .home-quote-spots-overlay3,
-    .header .home-quote-spots-overlay4{
-      display: none;
     }
 }
 
