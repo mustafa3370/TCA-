@@ -904,3 +904,39 @@ h2 {
     }
     
 }
+/*Start Game page */
+.Game {
+  padding-top: var(--section-padding);
+  padding-bottom: calc(var(--section-padding) + 60px);
+}
+.Game .home-quote-spots-overlay  {
+  position: absolute;
+  top: -20%;
+  right: 0;
+  width: 20%;
+  max-width: 300px;
+  opacity: 0.20;
+}
+.Game .Game-content {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+@media (max-width: 991px) {
+  .Game .Game-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .landing .home-quote-spots-overlay{
+    display: none;
+  }
+  body{
+    overflow-x: hidden;
+  }
+}
+
+
+
+
