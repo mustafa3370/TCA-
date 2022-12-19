@@ -344,22 +344,8 @@ header nav .form i{
       padding-top: var(--section-padding);
       padding-bottom: calc(var(--section-padding) + 60px);
     }
-    .proj .home-quote-spots-overlay  {
-      position: absolute;
-      top: 440%;
-      left: 40%;
-      width: 50%;
-      max-width: 350px;
-      opacity: 0.20;
-    }
-    .proj .home-quote-spots-overlay2  {
-      position: absolute;
-      top: 410%;
-      left: 30%;
-      width: 50%;
-      max-width: 200px;
-      opacity: 0.20;
-    }
+    
+    
     .proj .proj-content {
       margin-top: 100px;
       display: flex;
